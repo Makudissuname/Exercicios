@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de JavaScript</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style/style.css">
+    
+    <style>
+
+        
+    </style>
+</head>
+<body>
+
+  <h1>Somando Valores</h1>
+
+  <input class="caixa"type="number" name="txtb1" id="txtn1"placeholder="Número 1"> + 
+  
+  <input class="caixa" type="number" name="txtn2" id="txtn2" placeholder="Número 2  ">
+
+<input id="som" class="soma" type="button" value="Somar" onclick="somar()" onmouseenter="entra()" onmouseout="sair()">
+
+<div id="res">Resultado</div>
+  
+<footer>    
+    <a href="index.html"> Voltar </a>
+
+    <div id="fecha"></div>
+    <p>Developed by <a href="https://github.com/Makudissuname" target="_blank">Makudissuname</a></p>
+</footer>
+
+
+    <script>
+        
+        function somar(){
+            var tn1 = window.document.getElementById('txtn1')
+            var tn2 = window.document.querySelector('input#txtn2')
+            var res = window.document.getElementById('res')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var s = n1+n2
+
+            if(s == 0){
+                res.innerText = `Insira os números`
+
+            } else {
+            res.innerHTML = `A soma entre ${n1}  e  ${n2} é <strong>${s}</strong>`}
+        }
+        var a = window.document.getElementById('som')
+
+        function entra(){           
+
+            a.style.backgroundColor = 'darkgrey'
+            a.style.cursor = 'pointer'
+        }
+        function sair(){
+            
+            a.style.backgroundColor = 'white'
+        }
+    </script>
+</body>
+</html>

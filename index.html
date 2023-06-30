@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Java Script</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+   
+    
+</head>
+<body onload="carregar()">
+    <h1>Exercícios propostos</h1>
+
+    <div id="dia"></div>
+    
+<ul> 
+    <li><a href="calculo.html"> Calculo </a></li>
+    <li><a href="velocidade.html"> Teste Velocidade</a></li>
+    <li><a href="Nacionalidade.html"> Nacionalidade</a></li>
+    <li><a href="idade.html">Idade</a></li>
+    <li><a class="proibido" href="#"> Proximo</a></li>
+ 
+
+
+</ul>
+
+<section id="fundinho">
+    <div id="msg">
+        oi...
+    </div>
+    <div id="foto">
+       <img id="imagem" class="fotos" src="img/dia.jpg" alt="foto de dia">
+        
+    </div>
+    <div id="diaa">Bom dia</div>
+
+</section>
+
+    <script>
+        var dia = window.document.getElementById('dia')
+        var diaSem = new Date()
+        var hoje = diaSem.getDay()
+        var diaSemana = diaSem.getDate()
+        
+
+    
+        switch(hoje){
+    case 0:
+    hoje = (`Domingo, dia ${diaSemana}, dia de folga`)
+        break
+    case 1:
+    hoje = (`Segunda-Feira, dia ${diaSemana}, Dia de trabalhar`)
+        break
+    case 2:
+    hoje = (`Terça-Feira, dia ${diaSemana}, Dia de trabalhar`)
+        break
+    case 3:
+    hoje = (`Quarta-Feira, dia ${diaSemana}, Dia de trabalhar`)
+        break
+    case 4:
+    hoje = (`Quinta-Feira, dia ${diaSemana}, Dia de trabalhar`)
+        break
+    case 5:
+    hoje = (`Sexta-Feira, dia ${diaSemana}, Dia de trabalhar`)
+        break
+    case 6: 
+    hoje = (`Sábado, dia ${diaSemana}, dia de folga`)
+        break
+    }
+
+    dia.innerHTML = `Hoje é ${hoje}`
+
+    
+    function carregar(){
+
+var msg= window.document.getElementById('msg')
+var img= window.document.getElementById('imagem')
+var data = new Date()
+var hora = data.getHours()
+var min = data.getMinutes()
+
+var diaa = window.document.getElementById('diaa')
+var fundinho = window.document.getElementById('fundinho')
+msg.innerHTML = `Agora são <strong>${hora} Horas e ${min} Minutos</strong>.`
+
+
+if (hora >= 0 && hora < 12){
+    img.src = 'img/dia.jpg'
+    fundinho.style.background = '#FFFBF8'
+    diaa.innerHTML = `BOM DIA`
+    diaa.style.textShadow = 'none'
+    
+
+}
+else if(hora >= 12 && hora < 18){
+   img.src = 'img/tarde.jpg'
+   fundinho.style.background = '#6F849F'
+   diaa.innerHTML = `BOA TARDE`
+   diaa.style.color = '#ffffff'
+}
+else{
+    
+    img.src ='img/noite.jpg'
+    fundinho.style.background = '#152F3B'
+    diaa.innerHTML = `BOA NOITE`
+    diaa.style.color = '#ffffff'
+    msg.style.color = '#ffffff'
+    
+}
+
+}
+
+    </script>
+
+</body>
+<footer>    
+    
+
+    <div id="fecha"></div>
+    <p>Developed by &copy; <a href="https://github.com/Makudissuname" target="_blank">Makudissuname</a></p>
+</footer>
+</html>

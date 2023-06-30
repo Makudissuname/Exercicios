@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Velocidade</title>
+    <link rel="stylesheet" href="style/style.css">
+
+    <style>
+        input{
+            height: 50px;
+        }
+        input#verificar{
+            width:  100px;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1 >Sistema de Multas</h1>
+    Velocidade do Carro: <input type="number" name="txtvel" id="txtvel" placeholder="0">
+    <input id="verificar" type="button" value="Verificar" onclick="calcular()">
+    <div id="res"> Insira a Velocidade</div>
+
+    <script>
+        
+       
+
+       
+
+    function calcular(){
+        var txtv = window.document.getElementById('txtvel')
+        var res= window.document.querySelector('div#res')
+        var vel =  Number(txtv.value)
+        
+
+        if(vel == 0){
+            res.innerHTML = (`Insira uma velocidade`)
+        }else
+        if(vel <= 60){
+            res.innerHTML = `Sua Velocidade foi ${vel}, Parabéns!`
+        }else{
+            res.innerHTML = `Sua Velocidade foi ${vel}, Você foi multado!`
+        }
+       
+}
+
+    </script>
+
+</body>
+<footer>    
+    <a href="index.html"> Voltar </a>
+
+    <div id="fecha"></div>
+    <p>Developed by <a href="https://github.com/Makudissuname" target="_blank">Makudissuname</a></p>
+</footer>
+</html>

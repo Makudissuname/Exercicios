@@ -1,0 +1,157 @@
+@charset "UTF-8";
+*{
+    margin: 0px;
+    padding: 0px;
+    
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    text-align: center;
+    background: fixed;
+    background-image: linear-gradient(to top, rgb(142, 75, 75), rgb(184, 170, 170));
+    background-repeat:no-repeat;
+    background-size:auto;
+}
+
+div#res{
+    margin-top: 50px;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+ 
+}
+input{
+    text-align: center;
+    border-radius: 10px;
+}
+input.soma{
+    font-size: 1;
+    border-radius: 10px;
+    height: 50px;
+    width: 100px;
+    
+}
+input.caixa{
+    width: 300px;
+    height: 50px;
+}
+a{
+text-decoration: none;
+color: black;
+margin-top: 20px;}
+
+footer > a{
+    display:block;
+    margin: auto;
+    text-decoration: none;
+    color: white;
+    margin-top: 20px;
+    width: 100px;
+    background-color: black;
+    margin-top: 30px;
+
+    border: 2px double rgb(253, 62, 62);
+    border-radius: 15px;
+
+}
+
+ul{
+    min-height: 200px;
+    border: 2px double black;
+    border-radius: 15px;
+    list-style-type: none;
+    text-align: left;
+    margin: 50px;
+    columns: 2;
+    list-style-position: outside;
+    background-image: linear-gradient(to top, lightgrey, white);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.518);
+
+    padding: 10px;
+  
+}
+ul li {
+    margin-top: 10px;
+
+}
+ul li::before {
+    content: "→ ";
+}
+a.proibido{
+    cursor: none;
+}
+
+div#nacio2{
+    border: 2px solid rgb(138, 4, 4);
+    border-radius: 5px;
+    width: 300px;
+    height: 30px;
+    margin: auto;
+    margin-bottom: 5px;
+    height: auto;
+}
+
+div#nacio3{
+    border: 2px solid rgb(138, 4, 4);
+    border-radius: 5px;
+    width: 300px;
+    height: 30px;
+    margin: auto;
+    height: auto;
+}
+
+input#ipais{
+    height: 30px;
+    font-weight: bold;
+}
+div#dia{
+    margin-top: 20px;
+    color: red;
+    font-weight: bolder;
+    text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.406);
+}
+footer p{
+    background: black;
+    color: white;
+    width: 100vw;
+    position: absolute;
+    bottom: 10px;
+}
+
+footer p a{
+    color: white;
+    text-decoration: underline;
+}
+
+section{
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.614);
+
+}
+
+input#ipais{
+    margin: 10px;
+}
+
+input.nacio{
+    height: 30px;
+    width: 100px;
+}
+img.fotos{
+    margin-top: 20px;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    box-shadow: 8px 6px 6px rgba(0, 0, 0, 0.384);
+}
+div#diaa{
+    margin-top: 10px;
+    font-weight: bolder;
+    text-shadow: 2px 4px 2px black;
+  
+}

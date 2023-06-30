@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <h1>Testando sua nacionalidade</h1>
+
+    <form action="#">
+        <p>
+            <label for="ipais">País:</label>
+            <input type="text" name="pais" id="ipais" list="lstprof" placeholder="Escolha..">
+            <datalist id="lstprof">
+                <option >Brasil</option>
+                <option >EUA</option>
+                <option >França</option>
+                <option >Alemanha</option>
+                <option >Outros</option>
+
+            </datalist>
+            <input class="nacio" type="button" value="Verificar" onclick="clicou()">
+            <input class="nacio" type="reset" value="Limpar">
+        </p>
+
+    </form>
+
+    <div id="nacio2"><marquee behavior="" direction="left" id="nacio">Aguardando..</marquee></div>
+
+    <div id="nacio3">Selecione um País</div>
+    
+
+    <script>
+        function clicou(){
+            var res = window.document.getElementById('ipais')
+            var resul = window.document.getElementById('nacio2')
+            var resul2 = window.document.getElementById('nacio3')
+            resul.innerHTML = 'RESULTADO'
+
+          
+            if(res.value == 'Brasil'){
+                resul2.innerText = "Brasileiro"    
+                }   
+                else if(res.value == 'EUA'){
+                resul2.innerText = "Americano"
+               }
+               else if(res.value == 'França'){
+                resul2.innerText = "Francês"
+               }
+               else if(res.value == 'Alemanha'){
+                resul2.innerText = "Alemão"
+               } else if(res.value == 'Outros'){
+                resul2.innerText = "Estrangeiro"
+               }
+                else{
+                resul.innerText = "SELECIONE"
+                resul2.innerText = "UM PAÍS"
+               }
+            
+           
+            
+        }
+
+    </script>
+</body>
+<footer>    
+    <a href="index.html"> Voltar </a>
+
+    <div id="fecha"></div>
+    <p>Developed by <a href="https://github.com/Makudissuname" target="_blank">Makudissuname</a></p>
+</footer>
+</html>
