@@ -155,3 +155,15 @@ div#diaa{
     text-shadow: 2px 4px 2px black;
   
 }
+section#section-sexo{
+    width: 80vw;
+}
+input#verificar{
+    width: 100px;
+    height: 30px;
+    margin-top: 20px;
+}
+
+div#res{
+    height: 400px;
+}

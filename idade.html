@@ -16,28 +16,105 @@
 </style>
 </head>
 
-<body onload="carregar()">
+<body >
     <header>
-        <h1 style="margin:20px; color: white; text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.522);">Em Construção</h1>
+        <h1 style="margin:20px; color: white; text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.522);">Verificador de Idade</h1>
     </header>
-    <section>
-        <div id="msg">
-            oi...
+    <section id="section-sexo">
+        
+        <div>
+<p>Ano de Nascimento: <input type="number" name="txtano" id="txtano" min="0" placeholder="digite aqui..."></p>
+<p>Sexo: 
+    <input type="radio" name="radsex" id="masc" checked>
+    <label for="masc">Masculino</label>
+    <input type="radio" name="radsex" id="fem">
+    <label for="fem">Feminino</label> </p>
+    <input id="verificar" type="button" value="Verificar" onclick="verificar()">
         </div>
-        <div id="foto">
-           <img id="imagem" widt="100%" class="fotos" src="img/construcao.jpg" alt="foto de dia">
+
+        <div id="res">
             
         </div>
 
     </section>
 
-<script src="script.js"></script>
-    
+
+    <script>
+        function verificar(){
+         var data = new Date()
+         var ano = data.getFullYear()
+         var fAno = window.document.getElementById('txtano')
+         var res = window.document.getElementById('res')
+
+         if (fAno.value.length == 0 || Number(fAno.value) > ano){
+            window.alert(`[ERRO] : Adicione uma idade coerente!`)
+         }
+         else{
+            var fsex = document.getElementsByName('radsex')
+            var idade = ano - Number(fAno.value)
+            var genero = ''
+            var img = document.createElement('img')
+            img.setAttribute('id','foto')
+            if (fsex[0].checked){
+                genero = "um Homem"
+                if (idade >= 1 && idade < 5){
+                    //BB
+                        img.setAttribute('src','bebe-m.jpg')
+                    }
+                    else if ( idade < 12 ) {
+                        //CRIANÇA
+                        img.setAttribute('src','crianca-m.jpg')
+                    } else if ( idade < 21) {
+                    //ADOLESCENTE
+                    img.setAttribute('src','jovem-m.jpg')
+                    }
+                    else if (idade < 45) {
+                    //ADULTO
+                    img.setAttribute('src','velho-m.jpg')
+                    }
+                else{
+                    //idoso
+                    img.setAttribute('src','idoso-m.jpg')
+                }
+             } else if (fsex[1].checked){
+                genero = "uma Mulher"
+               if (idade >= 1 && idade < 5){
+                    //BB
+                        img.setAttribute('src','bebe-f.jpg')
+                    }
+                    else if ( idade < 12 ) {
+                        //CRIANÇA
+                        img.setAttribute('src','crianca-f.jpg')
+                    } else if ( idade < 21) {
+                    //ADOLESCENTE
+                    img.setAttribute('src','jovem-f.jpg')
+                    }
+                    else if (idade < 45) {
+                    //ADULTO
+                    img.setAttribute('src','velho-f.jpg')
+                    }
+                    else{
+                    //idoso
+                    img.setAttribute('src','idoso-f.jpg')
+                    }
+
+                
+                
+            }
+            res.innerHTML = `Identificamos  ${genero} com ${idade} anos`
+            res.appendChild(img)
+            
+            
+            }
+        }
+
+        
+    </script>
 </body>
 <footer>    
     <a href="index.html"> Voltar </a>
 
     <div id="fecha"></div>
-    <p>Developed by <a href="https://github.com/Makudissuname" target="_blank">Makudissuname</a></p>
+    <p>Developed by &copy; <a href="https://github.com/Makudissuname" target="_blank">Makudissuname</a></p>
 </footer>
 </html>
