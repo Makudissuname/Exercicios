@@ -11,17 +11,6 @@ function carregar(){
 
  
 
-    if (hora >= 0 && hora < 12){
-        img.src = 'img/dia.jpg'
-        document.body.style.background = '#EAC3A4'
-
-    }
-    else if(hora >= 12 && hora < 18){
-        document.body.style.background = '#EAC3A4'
-    }
-    else{
-        document.body.style.background = '#EAC3A4'
-
-    }
+ 
 
 }
