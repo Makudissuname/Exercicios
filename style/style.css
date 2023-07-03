@@ -162,8 +162,13 @@ input#verificar{
     width: 100px;
     height: 30px;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 div#res{
+    margin-top: 20px;
+    display: block;
+    margin: auto;
     height: 400px;
+    width: 600px;
 }

@@ -13,6 +13,11 @@
         height: 250px;
         border-radius: 50%;
     }
+    img{
+        margin-top: 20px;
+        border: 2px solid black;
+        border-radius: 50%;
+    }
 </style>
 </head>
 
@@ -59,43 +64,65 @@
                 genero = "um Homem"
                 if (idade >= 1 && idade < 5){
                     //BB
-                        img.setAttribute('src','bebe-m.jpg')
+                        img.setAttribute('src','img/bebe-m.jpg')
                     }
                     else if ( idade < 12 ) {
                         //CRIANÇA
-                        img.setAttribute('src','crianca-m.jpg')
+                        img.setAttribute('src','img/crianca-m.jpg')
                     } else if ( idade < 21) {
                     //ADOLESCENTE
-                    img.setAttribute('src','jovem-m.jpg')
+                    img.setAttribute('src','img/adolescente-m.jpg')
+                    }
+                    else if (idade < 30) {
+                    //ADULTO
+                    img.setAttribute('src','img/jovem-m.jpg')
+                    }
+                    else if (idade < 40) {
+                    //ADULTO
+                    img.setAttribute('src','img/adulto-m.jpg')
                     }
                     else if (idade < 45) {
                     //ADULTO
-                    img.setAttribute('src','velho-m.jpg')
+                    img.setAttribute('src','img/velho-m.jpg')
                     }
                 else{
                     //idoso
-                    img.setAttribute('src','idoso-m.jpg')
+                    img.setAttribute('src','img/idoso-m.jpg')
                 }
              } else if (fsex[1].checked){
                 genero = "uma Mulher"
                if (idade >= 1 && idade < 5){
                     //BB
-                        img.setAttribute('src','bebe-f.jpg')
+                        img.setAttribute('src','img/bebe-f.jpeg')
+                    }
+                    else if (idade == 41) {
+                    //Zara
+                    img.setAttribute('src','img/zara.jpg')
                     }
                     else if ( idade < 12 ) {
                         //CRIANÇA
-                        img.setAttribute('src','crianca-f.jpg')
-                    } else if ( idade < 21) {
+                        img.setAttribute('src','img/crianca-f.jpg')
+                    } 
+                    else if ( idade < 21) {
                     //ADOLESCENTE
-                    img.setAttribute('src','jovem-f.jpg')
+                    img.setAttribute('src','img/adolescente-f.jpg')
                     }
-                    else if (idade < 45) {
+                    else if (idade < 33) {
                     //ADULTO
-                    img.setAttribute('src','velho-f.jpg')
+                    img.setAttribute('src','img/jovem-f.jpg')
                     }
+                    else if (idade < 40) {
+                    //ADULTO
+                    img.setAttribute('src','img/adulto-f.jpg')
+                    }
+                    else if (idade < 50) {
+                    //ADULTO
+                    img.setAttribute('src','img/velho-f.jpg')
+                    }
+                   
                     else{
                     //idoso
-                    img.setAttribute('src','idoso-f.jpg')
+                    img.setAttribute('src','img/idoso-f.jpg')
                     }
 
                 
