@@ -37,7 +37,7 @@
     <input id="verificar" type="button" value="Verificar" onclick="verificar()">
         </div>
 
-        <div id="res">
+        <div id="res1">
             
         </div>
 
@@ -49,7 +49,7 @@
          var data = new Date()
          var ano = data.getFullYear()
          var fAno = window.document.getElementById('txtano')
-         var res = window.document.getElementById('res')
+         var res = window.document.getElementById('res1')
 
          if (fAno.value.length == 0 || Number(fAno.value) > ano){
             window.alert(`[ERRO] : Adicione uma idade coerente!`)
@@ -128,8 +128,8 @@
                 
                 
             }
-            res.innerHTML = `Identificamos  ${genero} com ${idade} anos`
-            res.appendChild(img)
+            res1.innerHTML = `Identificamos  ${genero} com ${idade} anos`
+            res1.appendChild(img)
             
             
             }
