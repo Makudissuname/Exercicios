@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Idade</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+<style>
+   input{
+    width: 200px;
+    height: 30px;
+    margin: auto;
+    border-radius: 6px;
+   }
+    
+</style>
+</head>
+
+<body >
+    <header>
+        <h1>Vamos Contar</h1>
+        <main>
+            <section>
+                <p>Início: <input type="number" name="inicio" id="txtinicio"></p>
+                <p>Fim: <input type="number" name="fim" id="txtfim"></p>
+                <p>Passo: <input type="number" name="passos" id="txtpassos" value="0"></p>
+                <input id="btncontar" type="button" value="Contar" onclick="contar()" onmouseenter="entrar()" onmouseout="sair()">
+
+               
+                <div id="contando" style="margin-top: 10px;"> Aguardando numeros...</div>
+
+                
+                    
+               
+            </section>
+        </main>
+    </header>
+  <script>
+
+function contar(){
+
+    var contar = window.document.getElementById('contando')
+    var inicio = window.document.getElementById('txtinicio')
+    var fim = window.document.getElementById('txtfim')
+    var passo = window.document.getElementById('txtpassos')
+   
+
+    if (inicio.value.length == 0 || fim.value.length == 0 || passo.value.length == 0){
+       contar.innerHTML = `Impossível contar`
+    }else{
+    contar.innerHTML = 'Contando: <br>'
+    let i = Number(inicio.value)
+    let f = Number(fim.value)
+    let p = Number(passo.value)
+
+    if(p <= 0){
+        window.alert('Passo Inválido! O Passo foi setado para o valor 1')
+        p=1
+    }
+    
+    if(i < f){
+    for(let c = i ; c <= f; c+= p)
+    contar.innerHTML += `${c} \u{1F449}`
+}else{
+    for(let c = i; c >= f; c -=p) {
+        contar.innerHTML += `${c} \u{1F449}`
+
+    }
+
+}
+
+}
+contar.innerHTML += `\u{1F3C1}`
+    
+}
+
+    
+
+function entrar(){
+        var a = window.document.getElementById('btncontar')
+        
+
+        a.style.backgroundColor = 'darkgrey'
+        a.style.cursor = 'pointer'
+}
+function sair(){
+        var a = window.document.getElementById('btncontar')
+        
+
+        a.style.backgroundColor = 'lightgrey'
+        a.style.cursor = 'pointer'
+}
+      
+    
+
+  </script>
+</body>
+<footer>    
+    <a href="numeros.html"> Voltar </a>
+
+    <div id="fecha"></div>
+    <p>Developed by &copy; <a href="https://github.com/Makudissuname" target="_blank">Makudissuname</a></p>
+</footer>
+</html>

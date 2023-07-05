@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Idade</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+<style>
+   select{
+    width: 150px;
+    margin: 20px;
+    border-radius: 5px;
+    padding: 20px;
+    border: 2px solid red;
+   
+   }
+    
+</style>
+</head>
+
+<body >
+    <header>
+        <h1>Tabuada</h1>
+    </header>
+    <main>
+        <section>
+            <div>
+                <p>Número: <input type="number" name="num" id="txtn"> 
+                <input type="button" value="Gerar Tabuada" onclick="gerar()"></p>
+            </div>
+            <div>
+                <select name="tabuada" id="seltab" size="10">
+                    <option>Digite um Número</option>
+                </select>
+            </div>
+        </section>
+    </main>
+ <script>
+    function gerar(){
+        var num = document.getElementById('txtn')
+        var tab = document.getElementById('seltab')
+      
+      
+        if (num.value.length == 0){
+            alert('Por favor, digite um numero.')
+            } else{
+            var n = Number(num.value)
+            var c = 1
+            tab.innerHTML = ' '
+            while (c <=10){
+                var item = document.createElement('option')
+                item.text = `${n} x ${c} = ${n*c}`
+                item.value = `tab${c}`
+                tab.appendChild(item)
+                c++
+
+            }
+            }
+           
+
+    }
+
+
+ </script>
+</body>
+<footer>    
+    <a href="numeros.html"> Voltar </a>
+
+    <div id="fecha"></div>
+    <p>Developed by &copy; <a href="https://github.com/Makudissuname" target="_blank">Makudissuname</a></p>
+</footer>
+</html>
