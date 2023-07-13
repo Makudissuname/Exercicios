@@ -1,0 +1,85 @@
+@charset "UTF-8";
+@font-face{
+    font-family: 'Android';
+    src: url('/font/idroid.otf') format('opentype');
+    font-weight: normal;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    
+}
+div.onewaynext:hover{
+    background-color: rgba(248, 4, 4, 0.526);
+    cursor: pointer;
+      
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    text-align: center;
+    background: fixed;
+    background-image: linear-gradient(to top, rgb(142, 75, 75), rgb(184, 170, 170));
+    background-repeat:no-repeat;
+    background-size:auto;
+}
+
+footer > a{
+    display:block;
+    margin: auto;
+    text-decoration: none;
+    color: white;
+    margin-top: 20px;
+    width: 100px;
+    background-color: black;
+    margin-top: 30px;
+
+    border: 2px double rgb(253, 62, 62);
+    border-radius: 15px;
+
+}
+
+ul{
+    min-height: 200px;
+    border: 2px double black;
+    border-radius: 15px;
+    list-style-type: none;
+    text-align: left;
+    margin: 50px;
+    columns: 2;
+    list-style-position: outside;
+    background-image: linear-gradient(to top, lightgrey, white);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.518);
+
+    padding: 10px;
+  
+}
+ul li {
+    margin-top: 10px;
+    }
+ul li a{
+    text-decoration: none;
+    color: black;
+    
+}
+ul li::before {
+    content: "→ ";
+}
+
+footer p{
+    background: black;
+    color: white;
+    width: 100vw;
+    position: absolute;
+    bottom: 10px;
+}
+
+footer p a{
+    color: white;
+    text-decoration: underline;
+}
+
+h1.titulo{
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 8px black;
+}

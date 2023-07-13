@@ -20,7 +20,7 @@
     <li><a href="Nacionalidade.html"> Nacionalidade</a></li>
     <li><a href="idade.html">Idade</a></li>
     <li><a href="numeros.html">Numeros</a></li>
-    <li><a href="oneway.html">Exercicios OneWay</a></li>
+    <li><a href="oneway/index2.html">Exercicios OneWay</a></li>
     <li><a class="proibido" href="construcao.html"> Proximo</a></li>
  
 
@@ -40,10 +40,10 @@
 </section>
 
     <script>
-        var dia = window.document.getElementById('dia')
-        var diaSem = new Date()
-        var hoje = diaSem.getDay()
-        var diaSemana = diaSem.getDate()
+        let dia = window.document.getElementById('dia')
+        let diaSem = new Date()
+        let hoje = diaSem.getDay()
+        let diaSemana = diaSem.getDate()
         
 
     
@@ -76,14 +76,14 @@
     
     function carregar(){
 
-var msg= window.document.getElementById('msg')
-var img= window.document.getElementById('imagem')
-var data = new Date()
-var hora = data.getHours()
-var min = data.getMinutes()
+let msg= window.document.getElementById('msg')
+let img= window.document.getElementById('imagem')
+let data = new Date()
+let hora = data.getHours()
+let min = data.getMinutes()
 
-var diaa = window.document.getElementById('diaa')
-var fundinho = window.document.getElementById('fundinho')
+let diaa = window.document.getElementById('diaa')
+let fundinho = window.document.getElementById('fundinho')
 msg.innerHTML = `Agora são <strong>${hora} Horas e ${min} Minutos</strong>.`
 
 
