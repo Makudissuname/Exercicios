@@ -9,6 +9,11 @@
     padding: 0px;
     
 }
+div.onewaynext:hover{
+    background-color: rgba(248, 4, 4, 0.526);
+    cursor: pointer;
+      
+}
 body{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.5em;
