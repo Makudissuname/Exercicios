@@ -27,16 +27,13 @@ img#maozinha{
     margin: auto;
     width: 50%;
     border-radius: 10px;
-    border
+  
 }
 
-section#paginas{
-    
-}
+
 section#paginas div{
     width: 40%;
     text-align: center;
-
 
 }
 div.onewaynext{
@@ -65,6 +62,34 @@ span{
     color: rgb(34, 109, 195);
     font-weight: bold;
 }
+input.dados{
+    display: flex;
+    width: 200px;
+    height: 25px;
+}
+input.btn{
+    display: block;
+    width: 100px;
+    height: 25px;
+    margin: auto;
+    margin-top: 10px;
+}
+input.btn:hover{
+    background-color: rgb(169, 168, 168) ;
+    cursor: pointer;
+}
+fieldset#sexo{
+    display: flex;
+    margin: 5px;
+    border-radius: 2px;
+    width: 300px;
+    
+
+}
+fieldset#geral{
+   padding: 5px;
+}
+
 </style>
 </head>
 
@@ -86,12 +111,34 @@ span{
     <li><span>“Autoconsciente”:</span> a IA autoconsciente é uma formulação hipotética, que conseguirá compreender e evocar emoções, necessidades, crenças e, potencialmente, desejos próprios.</li>
 </ol>
 
+<h3>Cadastre para receber nossas novidades</h3>
+<form action="teste.php" method="post">
 
-Agora, quando o assunto é a classificação técnica da inteligência artificial, devemos nos concentrar em três:
 
-Inteligência artificial estreita (ANI): representa toda a IA existente, em que só pode realizar uma tarefa específica;
-Inteligência geral artificial (AGI): se refere à capacidade da inteligência artificial geral aprender, perceber, compreender e funcionar completamente da mesma forma que um ser humano;
-Superinteligência artificial (ASI): pode replicar a inteligência multifacetada dos seres humanos, possui uma memória maior, analisa dados rapidamente e possui capacidades de tomada de decisão.
+    <fieldset id="geral">
+        <legend>Cadastro</legend>
+       
+            <p>Nome:<input class="dados" type="text" name="txtnome" id="txtnome" placeholder="Seu nome aqui"></p>
+            <p>Idade: <input class="dados"type="number" name="idade" id="idade" placeholder="Sua idade aqui"> </p>
+            <fieldset id="sexo">
+                <legend>Sexo</legend>
+                <input type="radio" name="sexo" id="isxmas"  value="M">
+                <label for="isxmas">Masculino</label> <br>
+                <input type="radio" name="sexo" id="isxfem" value="F">
+                <label for="isxfem">Feminino</label>
+            </fieldset>
+        
+
+        <p>E-mail: <input class="dados" type="email" name="mail" id="idmail" placeholder="Seu e-mail aqui"></p>
+        <p>Senha: <input  class="dados"  type="password" minlength="5" maxlength="10" value="" required size="8"  placeholder="Sua senha aqui" step="0.1" ></p> 
+
+       
+        <input class="btn" type="button" value="Enviar" >
+    </fieldset> 
+
+
+
+</form>
         </article>
 
  
@@ -108,7 +155,5 @@ Superinteligência artificial (ASI): pode replicar a inteligência multifacetada
 <footer>    
 
 
-    <div id="fecha"></div>
-    <p>Developed by &copy; <a href="https://github.com/Makudissuname" target="_blank">Makudissuname</a></p>
-</footer>
+
 </html>
