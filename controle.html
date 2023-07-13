@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu titulo aqui</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+<style>
+   select#flista{
+    width: 150px;
+   }
+    
+</style>
+</head>
+
+<body >
+    <header>
+        <h1>Analisador de Números</h1>
+    </header>
+    <section>
+        <div>
+            Numero (entre 1 e 100):
+            <input type="number" name="fnum" id="fnum">
+            <input type="button" value="Adicionar" onclick="adicionar()">
+            <br>
+            <select name="flista" id="flista" size="6"></select>
+            <br>
+            <input type="button" value="Finalizar" onclick="finalizar()">
+        </div>
+        <div id="res" ondragenter="btn_enter()">
+            
+        </div>
+    </section>
+  <script>
+    
+    let num = document.querySelector('input#fnum')
+    let lista = document.querySelector('select#flista')
+    let res = document.querySelector('div#res')
+    let valores = []
+
+    function isNumero(n){
+        if (Number(n) >= 1 && Number(n) <=100){
+            return true
+        }else{
+            return false
+        }
+
+    }
+
+    function inLista(n, l){
+        if (l.indexOf(Number(n)) != -1) {
+            return true
+        }else {
+            return false
+        }
+
+    }
+
+  
+    function adicionar(){
+        if(isNumero(num.value) && !inLista(num.value, valores)){
+            valores.push(Number(num.value))
+            let item = document.createElement('option')
+            item.text = `Valor ${num.value} adicionado` 
+            lista.appendChild(item)
+            res.innerHTML = ''
+
+        }else{
+            window.alert('Valor Invalido ou já encontrado na lista.')
+        }
+        num.value = ''
+        num.focus()
+
+    }
+
+    function finalizar(){
+        if(valores.length == 0){
+            windows.alert('Adicione valores antes de finalizar!')
+        }else{
+            let tot = valores.length
+            let maior = valores[0]
+            let menor = valores[0]
+            let soma = 0
+            let media = 0
+            for(let pos in valores){
+                soma += valores[pos]
+                if(valores[pos] > maior)
+                    maior = valores[pos]
+                if(valores[pos] < menor)
+                menor = valores[pos]
+            }
+
+
+            media = soma / tot
+            res.innerHTML = ''
+            res.innerHTML += `<p>Ao todo, temos ${tot} números cadastrados</p>`
+            res.innerHTML += `<p> O Maior valor informado foi ${maior}. </p>`
+            res.innerHTML += `<p>O Menor valor informado foi ${menor}. </p>`
+            res.innerHTML += `<p>Somando todos os valores, temos ${soma}. </p>`
+            res.innerHTML += `<p>A média dos valores digitados é ${media}. </p>`
+        }
+
+    }
+  </script>
+</body>
+<footer>    
+    <a href="numeros.html"> Voltar </a>
+
+    <div id="fecha"></div>
+    <p>Developed by &copy; <a href="https://github.com/Makudissuname" target="_blank">Makudissuname</a></p>
+</footer>
+</html>
