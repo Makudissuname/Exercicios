@@ -78,16 +78,28 @@ input.btn:hover{
     background-color: rgb(169, 168, 168) ;
     cursor: pointer;
 }
-fieldset#sexo{
-    display: flex;
-    margin: 5px;
-    border-radius: 2px;
-    width: 300px;
-    
 
-}
 fieldset#geral{
    padding: 5px;
+}
+input#idade{
+    width: 120px;
+}
+
+input.txtnome{
+     width: 97%;
+}
+div#catalogo{
+    display: flex;
+}
+
+fieldset#sexo{
+    display: flex;   
+    flex-direction:row ;
+    width: 300px;
+    
+    margin-left: 50px;
+    border-radius: 5px;
 }
 
 </style>
@@ -118,19 +130,21 @@ fieldset#geral{
     <fieldset id="geral">
         <legend>Cadastro</legend>
        
-            <p>Nome:<input class="dados" type="text" name="txtnome" id="txtnome" placeholder="Seu nome aqui"></p>
-            <p>Idade: <input class="dados"type="number" name="idade" id="idade" placeholder="Sua idade aqui"> </p>
-            <fieldset id="sexo">
-                <legend>Sexo</legend>
-                <input type="radio" name="sexo" id="isxmas"  value="M">
-                <label for="isxmas">Masculino</label> <br>
-                <input type="radio" name="sexo" id="isxfem" value="F">
-                <label for="isxfem">Feminino</label>
-            </fieldset>
+            <p>Nome:<input class="dados txtnome" type="text" name="txtnome" id="txtnome" placeholder="Seu nome aqui"></p>
+            <div id="catalogo">
+                <p>Idade: <input class="dados"type="number" name="idade" id="idade" placeholder="Sua idade aqui"> </p>
+                <fieldset id="sexo">
+                    <legend>Sexo</legend>
+                    <input class="sexo"type="radio" name="sexo" id="isxmas"  value="M">
+                    <label for="isxmas">Masculino</label> <br>
+                    <input class="sexo" type="radio" name="sexo" id="isxfem" value="F">
+                    <label for="isxfem">Feminino</label>
+                </fieldset>
+            </div>
         
 
-        <p>E-mail: <input class="dados" type="email" name="mail" id="idmail" placeholder="Seu e-mail aqui"></p>
-        <p>Senha: <input  class="dados"  type="password" minlength="5" maxlength="10" value="" required size="8"  placeholder="Sua senha aqui" step="0.1" ></p> 
+        <p>E-mail: <input class="dados txtnome" type="email" name="mail" id="idmail" placeholder="Seu e-mail aqui"></p>
+        <p>Senha: <input  class="dados txtnome"  type="password" minlength="5" maxlength="10" value="" required size="8"  placeholder="Sua senha aqui" step="0.1" ></p> 
 
        
         <input class="btn" type="button" value="Enviar" >
